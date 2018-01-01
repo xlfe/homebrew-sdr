@@ -7,7 +7,7 @@ class RxTools < Formula
   depends_on "pothosware/pothos/soapysdr"
   depends_on "pothosware/pothos/soapybladerf"
   depends_on "pothosware/pothos/soapyhackrf"
-  depends_on "pothosware/pothos/soapysomo" => :optional
+  depends_on "pothosware/pothos/soapyosmo" => :optional
   depends_on "pothosware/pothos/soapyredpitaya" => :optional
   depends_on "pothosware/pothos/soapyrtlsdr"
   depends_on "pothosware/pothos/soapyuhd" => :optional
