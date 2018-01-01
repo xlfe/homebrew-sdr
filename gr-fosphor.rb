@@ -9,6 +9,7 @@ class GrFosphor < Formula
   depends_on "freetype"
   depends_on "glfw3"
   depends_on "gnuradio"
+  depends_on "cppunit"
 
   def install
     mkdir "build" do
