@@ -9,6 +9,8 @@ class Cubicsdr < Formula
 
   depends_on "cmake" => :build
 
+  option "with-digital", "Build with Digital Lab support"
+
   depends_on "fftw"
   depends_on "librtlsdr"
   depends_on "liquid-dsp"
@@ -17,7 +19,11 @@ class Cubicsdr < Formula
 
   def install
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args
+
+      args = std_cmake_args
+      args << "-DENABLE_DIGITAL_LAB=1" if build.with? "digital"
+
+      system "cmake", "..", *args
       system "make"
 
       libexec.install Dir["x64/*"]
