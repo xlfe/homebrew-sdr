@@ -26,7 +26,7 @@ class Cubicsdr < Formula
       system "make"
 
       libexec.install Dir["x64/*"]
-      (bin/"CubicSDR").write <<-EOS.undent
+      (bin/"CubicSDR").write <<~EOS
         #!/usr/bin/env bash
         (
             cd #{libexec}
