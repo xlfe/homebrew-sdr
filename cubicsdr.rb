@@ -14,7 +14,7 @@ class Cubicsdr < Formula
   depends_on "librtlsdr"
   depends_on "liquid-dsp"
   depends_on "pothosware/pothos/soapysdr"
-  depends_on "wxmac""
+  depends_on "wxmac"
 
   def install
     mkdir "build" do
